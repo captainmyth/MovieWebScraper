@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Movie Web Scraper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1><strong>Movie Web Scraper</strong></h1>
+            </div>
+            <div class="search">
+                <form method="POST">
+                    <label for="movie_title">Please enter a movie title: </label>
+                    <input type="text" id="movie_title" name="movie_title" required>
+                    <input type="submit" value="Search for ratings!">
+                </form>
+            </div>
+            <div class="results">
+                {% if movie_information %}
+                    <h2><strong>Title: </strong>{{movie_information['Title']}}</h2>
+                    <p><strong>Year: </strong>{{movie_information['Year']}}</p>
+                    <p><strong>IMDB Rating: </strong>{{movie_information['IMDB Rating']}}</p>
+                    <p><strong>Rotten Tomatoes Tomatometer: </strong>{{movie_information['Rotten Tomatoes Tomatometer']}}</p>
+                    <p><strong>Metacritic Metascore: </strong>{{movie_information['Metacritic Metascore']}}</p>
+                {% endif %}
+            </div>     
+        </div>
+    </body>
+</html>
