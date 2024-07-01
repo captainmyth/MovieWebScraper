@@ -1,0 +1,36 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    padding: 2px;
+    margin: 5px;
+}
+
+.container {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    padding: 2px;
+    margin: 5px;
+}
+
+.search {
+    padding: 2px;
+    margin: 5px;
+}
+
+.results {
+    padding: 2px;
+    margin: 5px;
+}
